@@ -1,18 +1,15 @@
-
 // Online C compiler to run C program online
 #include <stdio.h>
-float rec(float n){
-    if (n==0){
-        return 0;
-    }else if(n==1){
+int rec(int n){
+    if (n<2){
         return 1;
     }
     
-    return rec(n-1)+rec(n-2);
+    return n*rec(n-1);
 }
 int main() {
     // Write C code here
-    printf("Hello world\n\t%f",rec(9));
+    printf("Hello world\n\t%d",rec(6));
 
     return 0;
 }
